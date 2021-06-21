@@ -1,0 +1,39 @@
+<!-- <div class="center">
+	<h1 style="text-align: center; font-weight: 600; font-size: xx-large;
+	 margin-top: 50px; margin-bottom: 100px;" >Import data</h1>
+</div>
+
+<div style="margin-left: 450px;">
+	<p style=" font-size: 20px; margin-left: 10px; margin-right: 30px; float: left;" >Select excel file to be uploaded</p>
+	<input type="file" (change)="onChange($event)">
+
+	<button (click)="onUpload()"
+		class="btn btn-success">
+		Upload
+	</button>
+</div>
+
+<div class="container text-center jumbotron"
+	*ngIf="shortLink">
+	<h2> Summary of Upload</h2>
+	<a href="{{shortLink}}">{{shortLink}}</a>
+</div>
+
+<div class="container" *ngIf="loading">
+	<h4>Loading ...</h4>
+</div> -->
+
+<div class="center">
+	<h1 style="text-align: center; font-weight: 600; font-size: xx-large;
+	 margin-top: 50px; margin-bottom: 100px;" >Import data</h1>
+</div>
+
+<div style="margin-left: 450px;">
+	<p style=" font-size: 20px; margin-left: 10px; margin-right: 30px; float: left;" >Select excel file to be uploaded</p>
+	<input type="file" id="input" (change)="excelRead($event)" />
+
+	<button (click)="onUpload()"
+		class="btn btn-success">
+		Upload
+	</button>
+</div>

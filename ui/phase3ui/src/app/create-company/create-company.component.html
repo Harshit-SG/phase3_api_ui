@@ -1,0 +1,73 @@
+<div class="jumbtron">
+  <h1 class="display-4 text-center">Company Details</h1>
+  <hr>
+  <div class="row">
+    <div class="col-md-5" style="margin-left: 20px;">
+      <form #form='ngForm' autocomplete="off" (submit)="onSubmit(form)">
+        <input type="hidden" name="CPId" [value]="service.formData.CPId">
+        <div class="form-group">
+          <input name="CompanyName" #CompanyName="ngModel" [(ngModel)]="service.formData.CompanyName" class="form-control" placeholder="Company Name">
+        </div>
+        <div class="form-group">
+          <input name="CEO" #CEO="ngModel" [(ngModel)]="service.formData.CEO" class="form-control" placeholder="CEO">
+        </div>
+        <div class="form-group">
+          <input name="Turnover" #Turnover="ngModel" [(ngModel)]="service.formData.Turnover" class="form-control" placeholder="Turnover">
+        </div>
+        <div class="form-group">
+          <input name="Description" #Description="ngModel" [(ngModel)]="service.formData.Description" class="form-control" placeholder="Description">
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-success btn-lg btn-block" 
+            style="width: 100%;margin-top: 10px;background-color: royalblue;" [disabled]="form.invalid"> Save 
+          </button>
+        </div>
+        
+      </form>
+    </div>
+
+  </div>
+</div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <h3 style="text-align: center; margin-top: 50px;">Create New Company</h3>
+<div class="container" >
+    <label for="companyName"><b>Company Name</b></label>
+    <input type="text">
+    <br />
+
+    <label for="ceo"><b>CEO and Board members</b></label>
+    <input type="text">
+    <br />
+
+    <label for="turnover"><b>Turnover</b></label>
+    <input type="number">
+    <br />
+
+    <label for="brief"><b>Brief description</b></label>
+    <input type="text">
+    <br />
+
+    <button type="submit">Save</button>
+
+  </div> -->

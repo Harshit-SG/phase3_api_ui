@@ -1,0 +1,23 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    
+
+    <div style="font-size: x-large;" class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a routerLink="/importdata"  style="margin-right: 100px; margin-left: 100px;" class="nav-link" >Import data</a>
+            </li>
+            <li class="nav-item">
+                <a routerLink="/managecompany" class="nav-link">Manage Company</a>
+            </li>
+            <li class="nav-item">
+                <a style="margin-right: 100px; margin-left: 100px;" class="nav-link" href="#">Manage Exchange</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Update IPO details</a>
+            </li>          
+        </ul>        
+    </div>
+    <button class="btn btn-danger" style="float: right;" (click)="onLogout()"> Logout </button>
+    
+</nav>
+<router-outlet></router-outlet>
