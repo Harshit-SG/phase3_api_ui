@@ -1,0 +1,26 @@
+<div class="center">
+	<h3 style=" float: left; margin-left: 20px; font-weight: 600; font-size: xx-large;
+	 margin-top: 50px;color: darkslategray;" >List of Companies</h3>
+
+	 <table class="table table-hover" style="margin-left: 20px;margin-right: 20px; cursor: pointer; font-size: large;">
+		<thead>
+			<th>Comapany Name</th>
+			<th>Bidding Dates</th>
+			<th>Price Range</th>
+			<th>Issue Size</th>
+			<th>Managing Director</th>
+		</thead>
+		<tbody>
+		 <tr *ngFor="let cd of service.list">
+			 <td (click)="populateForm(cd)">{{cd.CompanyName}}</td>
+			 <td (click)="populateForm(cd)">{{cd.BiddingDates}}</td>
+			 <td (click)="populateForm(cd)">{{cd.PriceRange}}</td>
+			 <td (click)="populateForm(cd)">{{cd.IssueSize}}</td>
+			 <td (click)="populateForm(cd)">{{cd.ManagingDirector}}</td>
+			 <!-- <td (click)="onDelete(cd.IpoId)"><i class="fa fa-trash"></i></td> -->
+			 
+		 </tr>
+		</tbody>
+	 </table>
+     
+</div>

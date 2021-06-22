@@ -9,6 +9,10 @@ import { AdminLandingPageComponent } from './admin-landing-page/admin-landing-pa
 import { AuthGuard } from './auth/auth.guard';
 import { UserLandingPageComponent } from './user-landing-page/user-landing-page.component';
 import { CompareCompanyComponent } from './compare-company/compare-company.component';
+import { OthersComponent } from './others/others.component';
+import { IpoComponent } from './ipo/ipo.component';
+import { IpoFormComponent } from './ipo/ipo-form/ipo-form.component';
+import { IpoListComponent } from './ipo/ipo-list/ipo-list.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -19,7 +23,11 @@ const routes: Routes = [
   { path: 'login', component: LoginPageComponent},
   { path: 'adminhome', component: AdminLandingPageComponent, canActivate:[AuthGuard], data :{ permittedRoles:['Admin'] }},
   { path: 'userhome', component: UserLandingPageComponent, canActivate:[AuthGuard]},
-  { path: 'comparecompany', component: CompareCompanyComponent}
+  { path: 'comparecompany', component: CompareCompanyComponent, canActivate:[AuthGuard]},
+  { path: 'others', component: OthersComponent, canActivate:[AuthGuard]},
+  { path: 'ipo', component: IpoComponent, canActivate:[AuthGuard], data :{ permittedRoles:['Admin'] }},
+  { path: 'addipo', component: IpoFormComponent, canActivate:[AuthGuard], data :{ permittedRoles:['Admin'] }},
+  { path: 'ipolist', component: IpoListComponent, canActivate:[AuthGuard]},
 
 ];
 

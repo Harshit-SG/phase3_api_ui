@@ -21,11 +21,11 @@ import { UserRegisterComponent } from './user-register/user-register.component';
 import { UserService } from './shared/user.service';
 import { CompareCompanyComponent } from './compare-company/compare-company.component';
 
-import { FusionChartsModule } from 'angular2-fusioncharts';
-import * as FusionCharts from 'fusioncharts';
-// Import FusionCharts Charts module
-import * as Charts from 'fusioncharts/fusioncharts.charts';
-
+import { ChartsModule } from 'ng2-charts';
+import { OthersComponent } from './others/others.component';
+import { IpoComponent } from './ipo/ipo.component';
+import { IpoListComponent } from './ipo/ipo-list/ipo-list.component';
+import { IpoFormComponent } from './ipo/ipo-form/ipo-form.component';
 
 
 @NgModule({
@@ -38,7 +38,11 @@ import * as Charts from 'fusioncharts/fusioncharts.charts';
     CreateCompanyComponent,
     LoginPageComponent,
     UserRegisterComponent,
-    CompareCompanyComponent,    
+    CompareCompanyComponent,
+    OthersComponent,
+    IpoComponent,
+    IpoListComponent,
+    IpoFormComponent,    
   ],
   imports: [
     BrowserModule,
@@ -48,7 +52,7 @@ import * as Charts from 'fusioncharts/fusioncharts.charts';
     FormsModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    FusionChartsModule.forRoot(FusionCharts, Charts)
+    ChartsModule
   ],
   providers: [CompanyDetailService, UserService],
   bootstrap: [AppComponent]

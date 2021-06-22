@@ -36,6 +36,9 @@ namespace phase3api
             services.AddDbContext<CompanyRecordContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("RecConnection")));
 
+            services.AddDbContext<IpoContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("IpConnection")));
+
             services.AddCors();
         }
 

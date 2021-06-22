@@ -1,0 +1,34 @@
+<div class="jumbtron">
+    <h1 class="display-4 text-center">IPO Details</h1>
+    <hr>
+    <div class="row">
+      <div class="col-md-5" style="margin-left: 20px;">
+        <form #form='ngForm' autocomplete="off" (submit)="onSubmit(form)">
+          <input type="hidden" name="IpoId" [value]="service.formData.IpoId">
+          <div class="form-group">
+            <input name="CompanyName" #CompanyName="ngModel" [(ngModel)]="service.formData.CompanyName" class="form-control" placeholder="Company Name">
+          </div>
+          <div class="form-group">
+            <input name="BiddingDates" #BiddingDates="ngModel" [(ngModel)]="service.formData.BiddingDates" class="form-control" placeholder="Bidding Dates">
+          </div>
+          <div class="form-group">
+            <input name="PriceRange" #PriceRange="ngModel" [(ngModel)]="service.formData.PriceRange" class="form-control" placeholder="Price Range">
+          </div>
+          <div class="form-group">
+            <input name="IssueSize" #IssueSize="ngModel" [(ngModel)]="service.formData.IssueSize" class="form-control" placeholder="Issue Size">
+          </div>
+          <div class="form-group">
+            <input name="ManagingDirector" #ManagingDirector="ngModel" [(ngModel)]="service.formData.ManagingDirector" class="form-control" placeholder="Managing Director">
+          </div>
+  
+          <div class="form-group">
+            <button type="submit" class="btn btn-success btn-lg btn-block" 
+              style="width: 100%;margin-top: 10px;background-color: royalblue;" [disabled]="form.invalid"> Save 
+            </button>
+          </div>
+          
+        </form>
+      </div>
+  
+    </div>
+  </div>
